@@ -1,0 +1,8 @@
+/* Box sizing will allow us to more reliably predict how elements work with margins and padding */
+* {
+  box-sizing: border-box;
+}
+/* This will be easier to work with the responsive Rem unit */
+:root {
+  font-size: 10px;
+}
