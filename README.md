@@ -41,15 +41,43 @@ Now the changes have been pushed to the remote repository under that branch name
 ## Opening a pull request
 
 Go to the repository on GitHub.com and click the "Compare & pull request" button for your branch.
-Fill in the PR template, providing a summary of your changes and any other relevant information for reviewers.
+<br/>
+<br/>
 
+![Initialise](./assets/readme-assets/compare_pull.jpg)
+
+<br/>
+
+Fill in the PR template, providing a summary of your changes and any other relevant information for reviewers.
+<br/>
+<br/>
+
+![Submit](./assets/readme-assets/title_desc.jpg)
+
+<br/>
 This will notify everyone else on the team so that they can look at it and approve it.
 
 ## Approving a pull request
 
-- Approve the PR request if you are happy and there are no conflicts. (Click on button)
-- An option will come up that you can now Merge. Click this button
-- Choose "Squash and Merge" - Click this Button and this will merge the branch to main.
+- Approve the PR request if you are happy and there are no conflicts.
+- Choose "Squash and Merge". This will consolidate all the commits of the PR request into one
+  <br/>
+  <br/>
+  <br/>
+  ![](./assets/readme-assets/merge_options.jpg)
+  <br/>
+- Confirm the submission
+  <br/>
+  <br/>
+  <br/>
+  ![](./assets/readme-assets/merge_confirm.jpg)
+  <br/>
+- delete the branch
+  <br/>
+  <br/>
+  <br/>
+  ![](./assets/readme-assets/delete_branch.jpg)
+  <br/>
 
 ## Update Your own Repository
 
