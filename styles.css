@@ -2,7 +2,28 @@
 * {
   box-sizing: border-box;
 }
-/* This will be easier to work with the responsive Rem unit */
-:root {
+/* This will be easier to work with the responsive Rem unit.  Unfortunately bootstrap appears to be geared towards 16px font-size so this doesn't really work */
+/* :root {
   font-size: 10px;
+} */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Products Specifics Section */
+.product-grid {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+  justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
