@@ -27,3 +27,18 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* MiniGame CSS */
+#driveArea {
+  height: calc(100vh - 5rem);
+  position: relative;
+}
+
+#gameCar {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  height: 5rem;
+  width: 3rem;
+  object-fit: contain;
+}

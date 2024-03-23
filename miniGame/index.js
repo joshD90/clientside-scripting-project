@@ -1,3 +1,5 @@
+// I have decided to ditch the canvas approach and just work directly with the DOM as I feel that it fits the project slightly better
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -8,16 +10,17 @@ let left = false;
 let right = false;
 
 class Car {
-  constructor(x, y, width, height, color) {
+  constructor(x, y, width, height, color, rotationAngle) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
     this.color = color;
+    this.rotation = rotationAngle;
   }
 }
 
-const myCar = new Car(10, 20, 30, 50, "red");
+const myCar = new Car(50, 50, 30, 50, "red", 90);
 
 //managing input
 const manageKeyDown = (event) => {
@@ -86,8 +89,21 @@ const moveCar = (car, changeAmount) => {
 
 //drawing
 const drawCar = (car) => {
+  //we must save the context of the car before rotating
+  ctx.save();
+
+  //convert rotation from degrees to radians
+  const rotation = car.rotation * (Math.PI / 180);
+  ctx.translate(car.x, car.y);
+
+  //rotate the context
+  ctx.rotate(rotation);
+
+  //draw our shape
   ctx.fillStyle = car.color;
-  ctx.fillRect(car.x, car.y, car.width, car.height);
+
+  ctx.fillRect(0, 0, car.width, car.height);
+  ctx.restore();
 };
 
 //main event loop
