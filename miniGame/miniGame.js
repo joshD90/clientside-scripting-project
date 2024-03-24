@@ -1,5 +1,7 @@
 const driveArea = document.getElementById("driveArea");
 const car = document.getElementById("gameCar");
+const timer = document.getElementById("time");
+const successMessage = document.getElementById("successMessage");
 
 const coinsArray = [
   [10, 20],
@@ -10,6 +12,9 @@ const coinsArray = [
 ];
 
 let coinElementsArray = [];
+
+let time = 0;
+let timerGoing = true;
 
 //key directions
 let up = false;
@@ -184,6 +189,7 @@ const checkCoinCollision = (coin) => {
     right: coinRight,
     bottom: coinBottom,
   } = coin.getBoundingClientRect();
+  //there is a bit of a problem with this where some of the issues with it when the car is at an angle it can eat the coins when they arent in the radius.  THis is due to simply checking x and y values of the bounding rect which leads to a much bigger "square area"
   //if the car top or bottom is in between the coin top and bottom points
   if (
     (coinTop > carTop && coinTop < carBottom) ||
@@ -200,12 +206,47 @@ const checkCoinCollision = (coin) => {
 
 const checkAllCoinsCollision = () => {
   coinElementsArray = coinElementsArray.map((coin) => checkCoinCollision(coin));
+  if (coinElementsArray.every((coin) => coin == null)) {
+    timerGoing = false;
+    successMessage.innerText =
+      "You won with " +
+      time.toFixed(1) +
+      "seconds!!   " +
+      "Click me to Play Again";
+    successMessage.style.opacity = 1;
+  }
 };
+
+const countTime = () => {
+  setInterval(() => {
+    if (timerGoing) {
+      time = time + 0.1;
+    }
+  }, 100);
+};
+
+countTime();
+
+const updateTime = () => {
+  timer.innerText = time.toFixed(2).toString() + "s";
+};
+
+const resetGame = () => {
+  if ((successMessage.style.opacity = 0)) return;
+  time = 0;
+  timerGoing = true;
+  setAllCoins();
+  successMessage.style.opacity = 0;
+};
+
+//reset game
+successMessage.addEventListener("click", resetGame);
 
 const eventLoop = () => {
   rotateCar();
   moveCar();
   checkAllCoinsCollision();
+  updateTime();
 
   requestAnimationFrame(eventLoop);
 };
