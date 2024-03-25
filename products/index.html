@@ -48,26 +48,24 @@
             data-bs-target="#productModal"
           ></button>
           <div>
-            <img
-              src="../assets/cars/car-1-pexels.jpeg"
-              alt="car-image"
-              class="w-100"
-            />
+            <img alt="car-image" class="w-100" id="modalImg" />
           </div>
           <div class="p-3">
-            <h2>BMW Name</h2>
-            <p>
+            <h2 id="modalName">BMW Name</h2>
+            <p id="modalDesc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
               recusandae nihil esse quasi ipsa sunt, eligendi qui dolorum
               deleniti eaque explicabo quae numquam labore beatae debitis saepe
               perspiciatis neque perferendis.
             </p>
-            <p>€55000.00</p>
+            <p id="modalPrice">€55000.00</p>
           </div>
         </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./index.js"></script>
+    <script src="../assets/cars/carList.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
+    <script src="./modal.js" type="module"></script>
   </body>
 </html>

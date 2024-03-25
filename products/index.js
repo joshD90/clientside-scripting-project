@@ -1,7 +1,9 @@
+import { carsArray } from "../assets/cars/carList.js";
+import { setModalDetails } from "./modal.js";
+
 const productContainer = document.getElementById("product-container");
 
 const createCard = (carDetails) => {
-  console.log(carDetails);
   //create our elements
   const gridCellContainer = document.createElement("div");
   const cardContainer = document.createElement("div");
@@ -38,20 +40,20 @@ const createCard = (carDetails) => {
   cardBody.append(carHead, carDesc, carPrice);
   cardContainer.append(cardImg, cardBody);
   productContainer.append(cardContainer);
+
+  //work turn the whole card into the modal toggler
+  cardContainer.dataset.bsToggle = "modal";
+  cardContainer.dataset.bsTarget = "#productModal";
+
+  //add on the modal listener
+  cardContainer.addEventListener("click", () =>
+    setModalDetails(carDetails.name)
+  );
 };
 
 const appendAll = () => {
-  //create our dummy data that we will populate the products with for now
-  const dummyData = {
-    name: "BMW",
-    desc: "Super Sleek Beauty of a car",
-    price: 55000,
-    img: "../assets/cars/car-1-pexels.jpeg",
-  };
-
-  const dummyDataArray = new Array(10).fill(dummyData);
   //iterate through all of the array append all of these to
-  dummyDataArray.forEach((car) => createCard(car));
+  carsArray.forEach((car) => createCard(car));
 };
 
 appendAll();
