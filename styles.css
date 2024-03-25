@@ -10,10 +10,61 @@
 body {
   padding: 0;
   margin: 0;
-  --primary-color: blue;
-  --secondary-color: red;
-  --background-color: black;
+  --primary-color: #910a2d;
+  --secondary-color: #606060;
+  --background-color: #c0c0c0;
   --highlight-color: green;
+}
+
+/* Custom Classes */
+/* background */
+.lucky-bg-primary {
+  background-color: var(--primary-color);
+}
+.lucky-bg-secondary {
+  background-color: var(--secondary-color);
+}
+.lucky-bg-background {
+  background-color: var(--background-color);
+}
+.lucky-bg-hightlight {
+  background-color: var(--highlight-color);
+}
+
+/* Border Color Classes */
+.lucky-border-primary {
+  border-color: var(--primary-color);
+}
+.lucky-border-secondary {
+  border-color: var(--secondary-color);
+}
+.lucky-border-background {
+  border-color: var(--background-color);
+}
+.lucky-border-highlight {
+  border-color: var(--highlight-color);
+}
+/* Use !important to ensure the border style (solid) and width (1px) are applied if the element doesn't already have a border defined */
+.lucky-border-primary,
+.lucky-border-secondary,
+.lucky-border-background,
+.lucky-border-highlight {
+  border-style: solid !important;
+  border-width: 1px !important;
+}
+
+/* Text Color Classes */
+.lucky-text-primary {
+  color: var(--primary-color);
+}
+.lucky-text-secondary {
+  color: var(--secondary-color);
+}
+.lucky-text-background {
+  color: var(--background-color);
+}
+.lucky-text-highlight {
+  color: var(--highlight-color);
 }
 
 /* Products Specifics Section */
