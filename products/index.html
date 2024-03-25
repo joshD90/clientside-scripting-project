@@ -11,18 +11,12 @@
     <title>Products</title>
   </head>
   <body>
-    <div class="px-3 py-3 container-fluid">
-      <h1 class="text-center">Products</h1>
-      <section class="container shadow p-3 rounded">
-        <div class="d-flex justify-content-between mb-3">
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#productModal"
-          >
-            View Product
-          </button>
+    <div class="px-3 py-3 container-fluid lucky-bg-background">
+      <h1 class="text-center lucky-text-black font-bold">
+        Check out our Range
+      </h1>
+      <section class="container shadow p-3 rounded bg-white">
+        <div class="d-flex justify-content-end mb-3">
           <form action="">
             <select class="form-select" aria-label="Default select example">
               <option selected>Open this select menu</option>
@@ -50,8 +44,14 @@
           <div>
             <img alt="car-image" class="w-100" id="modalImg" />
           </div>
+
+          <h2
+            id="modalName"
+            class="w-100 p-2 text-white lucky-bg-primary text-center"
+          >
+            BMW Name
+          </h2>
           <div class="p-3">
-            <h2 id="modalName">BMW Name</h2>
             <p id="modalDesc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
               recusandae nihil esse quasi ipsa sunt, eligendi qui dolorum

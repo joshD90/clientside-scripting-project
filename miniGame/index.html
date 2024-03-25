@@ -12,17 +12,17 @@
   </head>
   <body>
     <section
-      class="container-fluid d-flex flex-column align-items-center justify-content-center vh-100"
+      class="container-fluid d-flex flex-column align-items-center justify-content-center vh-100 lucky-bg-background p-0 p-md-3"
     >
-      <h1>Mini-game</h1>
-      <div class="alert alert-info" id="alertMessage">
+      <h1 class="lucky-text-black">Mini-game</h1>
+      <div class="alert alert-info mx-3" id="alertMessage">
         Use the arrow keys to drive the car around. You must be moving to turn.
         Drive over the coins to pick them up. How fast can you pick them up?
       </div>
       <p id="time"></p>
       <div
         id="driveArea"
-        class="w-100 bg-light border-dark"
+        class="w-100 lucky-bg-secondary lucky-border-primary"
         style="position: relative"
       >
         <!-- https://www.pngegg.com/en/png-xwuge/download -->
@@ -32,7 +32,6 @@
           id="gameCar"
         />
       </div>
-      <!-- <canvas id="canvas" width="300" height="300" class="shadow"></canvas> -->
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./car.js" type="module"></script>

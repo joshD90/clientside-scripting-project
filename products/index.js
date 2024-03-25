@@ -29,16 +29,22 @@ const createCard = (carDetails) => {
     "justify-content-center",
     "container-fluid"
   );
-  cardContainer.classList.add("card", "container-fluid", "shadow-sm");
+  cardContainer.classList.add(
+    "card",
+    "container-fluid",
+    "shadow-sm",
+    "lucky-bg-background",
+    "p-0"
+  );
   cardImg.classList.add("card-img-top");
   cardBody.classList.add("card-body");
-  carHead.classList.add("card-title");
+  carHead.classList.add("lucky-bg-primary", "p-2", "w-100", "text-white");
   carDesc.classList.add("card-text");
   carPrice.classList.add("card-text");
 
   //append to our document in reverse order
-  cardBody.append(carHead, carDesc, carPrice);
-  cardContainer.append(cardImg, cardBody);
+  cardBody.append(carDesc, carPrice);
+  cardContainer.append(cardImg, carHead, cardBody);
   productContainer.append(cardContainer);
 
   //work turn the whole card into the modal toggler

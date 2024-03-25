@@ -1,5 +1,10 @@
 import { resetTime, stopTimer, time, timerGoing } from "./time.js";
-import { coinElementsArray, setAllCoins } from "./coins.js";
+import {
+  coinElementsArray,
+  coinsArray,
+  generateCoinsArray,
+  setAllCoins,
+} from "./coins.js";
 
 //grab our DOM elements
 
@@ -15,8 +20,9 @@ export const handleWin = () => {
   alertMessage.classList.add("alert-success");
 
   //Set alertMessage with template literals
-  alertMessage.innerText = `You won in just ${time.toFixed(1)} seconds!!
-    Click me to Play Again`;
+  alertMessage.innerText = `You won in just ${time.toFixed(
+    1
+  )} seconds!!  Click me to Play Again`;
 };
 
 //reset our game back to starting position. (the car is not returned)
@@ -24,6 +30,8 @@ const resetGame = () => {
   //as this is triggered by pressing the alert message make sure that the game is not in play
   if (coinElementsArray.some((coin) => coin !== null)) return;
   resetTime();
+  coinsArray.length = 0;
+  generateCoinsArray();
   setAllCoins();
   //update our alertMessage
   alertMessage.classList.remove("alert-success");
