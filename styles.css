@@ -10,6 +10,10 @@
 body {
   padding: 0;
   margin: 0;
+  --primary-color: blue;
+  --secondary-color: red;
+  --background-color: black;
+  --highlight-color: green;
 }
 
 /* Products Specifics Section */
