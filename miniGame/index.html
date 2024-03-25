@@ -15,7 +15,10 @@
       class="container-fluid d-flex flex-column align-items-center justify-content-center vh-100"
     >
       <h1>Mini-game</h1>
-      <div class="alert alert-success" id="successMessage"></div>
+      <div class="alert alert-info" id="alertMessage">
+        Use the arrow keys to drive the car around. You must be moving to turn.
+        Drive over the coins to pick them up. How fast can you pick them up?
+      </div>
       <p id="time"></p>
       <div
         id="driveArea"
@@ -23,11 +26,20 @@
         style="position: relative"
       >
         <!-- https://www.pngegg.com/en/png-xwuge/download -->
-        <img src="./carTopDown.png" alt="Game Car" id="gameCar" />
+        <img
+          src="../assets/miniGame/carTopDown.png"
+          alt="Game Car"
+          id="gameCar"
+        />
       </div>
       <!-- <canvas id="canvas" width="300" height="300" class="shadow"></canvas> -->
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./miniGame.js"></script>
+    <script src="./car.js" type="module"></script>
+    <script src="./coins.js" type="module"></script>
+    <script src="./collisions.js" type="module"></script>
+    <script src="./time.js" type="module"></script>
+    <script src="./win.js" type="module"></script>
+    <script src="./miniGame.js" type="module"></script>
   </body>
 </html>
