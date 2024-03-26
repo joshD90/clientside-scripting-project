@@ -36,8 +36,9 @@ const manageKeyDown = (event) => {
       down = true;
       break;
     default:
-      break;
+      return;
   }
+  event.preventDefault();
 };
 //deactive the direction once the key stops being pressed
 const manageKeyUp = (event) => {
