@@ -1,13 +1,37 @@
+const COIN_IMAGE_WIDTH = 20;
+const NUM_COINS = 10;
+
 //we dynamically assign the % left and % top to the coins.  This can be easily updated
-const coinsArray = [
-  [10, 20],
-  [20, 30],
-  [60, 20],
-  [90, 80],
-  [60, 50],
-  [20, 80],
-  [90, 30],
-];
+export const coinsArray = [];
+
+const generateRandomPosition = () => {
+  //generate the percentage of the top and left.  With 94 and then add 3 we ensure that we are always between 3% and 97% so that we don't end up slipping over the edge
+  const num1 = Math.floor(Math.random() * 94) + 3;
+  const num2 = Math.floor(Math.random() * 94) + 3;
+  //if any coins are sitting on top of each other
+  if (
+    coinsArray.some((coin) => {
+      //math.abs ignores the +- signs
+      const num1Diff = Math.abs(coin[0] - num1);
+      const num2Diff = Math.abs(coin[1] - num2);
+      //distance must be greater than the radius
+      if (num1Diff < COIN_IMAGE_WIDTH / 2 && num2Diff < COIN_IMAGE_WIDTH / 2)
+        return true;
+    })
+  )
+    //if they are sitting on top of each other recursively call the cycle again
+    return generateRandomPosition();
+  return [num1, num2];
+};
+
+export const generateCoinsArray = () => {
+  for (let i = 0; i < NUM_COINS; i++) {
+    const randomPosition = generateRandomPosition();
+    coinsArray.push(randomPosition);
+  }
+};
+
+generateCoinsArray();
 
 //empty array to push onto when we create the elements
 export let coinElementsArray = [];
