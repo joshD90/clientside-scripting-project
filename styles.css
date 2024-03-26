@@ -77,6 +77,11 @@ body {
   color: var(--black-substitute);
 }
 
+/* Navbar Specifics Section */
+.nav-img {
+  width: 4rem;
+}
+
 /* Products Specifics Section */
 .product-grid {
   width: 100%;
