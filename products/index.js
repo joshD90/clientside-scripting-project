@@ -57,9 +57,13 @@ const createCard = (carDetails) => {
   );
 };
 
-const appendAll = () => {
+export const appendAll = () => {
   //iterate through all of the array append all of these to
   carsArray.forEach((car) => createCard(car));
+};
+
+export const removeAll = () => {
+  productContainer.innerHTML = "";
 };
 
 appendAll();
