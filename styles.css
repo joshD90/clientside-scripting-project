@@ -151,19 +151,19 @@ body {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 30px; /* Adjust width as needed */
-    height: 30px; /* Adjust height as needed */
+    width: 80px; /* Adjust width as needed */
+    height: 80px; /* Adjust height as needed */
     border: 0;
-    background: url("../assets/MotorLogo.webp") center center no-repeat;
+    background: url("./assets/MotorLogo.webp") center center no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-    width: 30px; /* Adjust width as needed */
-    height: 30px; /* Adjust height as needed */
+    width: 80px; /* Adjust width as needed */
+    height: 80px; /* Adjust height as needed */
     border: 0;
-    background: url("../assets/MotorLogo.webp") center center no-repeat;
+    background: url("./assets/MotorLogo.webp") center center no-repeat;
     background-size: cover;
     cursor: pointer;
 }
