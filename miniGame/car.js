@@ -1,6 +1,7 @@
 import { handleWallCollisions } from "./collisions.js";
 
 const car = document.getElementById("gameCar");
+//our direction buttons for
 
 //key directions - we don't attach the move directly to the keydown as this will only trigger it once.  We want to be able to hold down the key
 let up = false;
@@ -9,6 +10,7 @@ let left = false;
 let right = false;
 
 //
+console.log(navigator.userAgent);
 class Car {
   constructor(x, y, width, height, speed, rotationAngle) {
     this.x = x;
@@ -63,6 +65,30 @@ const manageKeyUp = (event) => {
 //attach the functionality to the keydown and key-up events
 document.addEventListener("keydown", manageKeyDown);
 document.addEventListener("keyup", manageKeyUp);
+
+//add listeners for mobile
+const addMobileButtonListeners = () => {
+  // https://www.capscode.in/blog/how-to-detect-mobile-device-in-javascript#https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia
+  if (!window.matchMedia("(pointer:coarse)").matches) return;
+
+  //now get our buttons
+  const leftBtn = document.getElementById("btnLeft");
+  const forwardBtn = document.getElementById("btnForward");
+  const backBtn = document.getElementById("btnBack");
+  const rightBtn = document.getElementById("btnRight");
+  //work off of the mobile friendly 'touches' events this will be equivilent to keydown
+  leftBtn.addEventListener("touchstart", () => (left = true));
+  forwardBtn.addEventListener("touchstart", () => (up = true));
+  backBtn.addEventListener("touchstart", () => (down = true));
+  rightBtn.addEventListener("touchstart", () => (right = true));
+  //equivalent of keyup event
+  leftBtn.addEventListener("touchend", () => (left = false));
+  forwardBtn.addEventListener("touchend", () => (up = false));
+  backBtn.addEventListener("touchend", () => (down = false));
+  rightBtn.addEventListener("touchend", () => (right = false));
+};
+
+addMobileButtonListeners();
 
 //instantiate our car
 export const myCar = new Car(120, 120, car.width, car.height, 5, 0);
