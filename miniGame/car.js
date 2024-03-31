@@ -1,6 +1,7 @@
 import { handleWallCollisions } from "./collisions.js";
 
 const car = document.getElementById("gameCar");
+//our direction buttons for
 
 //key directions - we don't attach the move directly to the keydown as this will only trigger it once.  We want to be able to hold down the key
 let up = false;
@@ -9,6 +10,7 @@ let left = false;
 let right = false;
 
 //
+console.log(navigator.userAgent);
 class Car {
   constructor(x, y, width, height, speed, rotationAngle) {
     this.x = x;

@@ -57,7 +57,7 @@
       </div>
     </nav>
     <section
-      class="container-fluid d-flex flex-column align-items-center justify-content-center vh-100 lucky-bg-background p-0 p-md-3"
+      class="container-fluid d-flex flex-column align-items-center justify-content-center lucky-bg-background p-0 p-md-3"
     >
       <h1 class="lucky-text-black">Mini-game</h1>
       <div class="alert alert-info mx-3" id="alertMessage">
@@ -76,6 +76,31 @@
           alt="Game Car"
           id="gameCar"
         />
+      </div>
+      <div class="d-flex d-sm-flex w-100 opacity-50">
+        <button id="btnLeft" class="flex-grow-1 btn btn-secondary">Left</button>
+        <div class="d-flex flex-column flex-grow-1 lucky-border-primary">
+          <button
+            id="btnForward"
+            style="height: 4rem"
+            class="btn btn-secondary lucky-border-primary"
+          >
+            Forward
+          </button>
+          <button
+            id="btnBack"
+            style="height: 4rem"
+            class="btn btn-secondary lucky-border-primary"
+          >
+            Back
+          </button>
+        </div>
+        <button
+          id="btnRight"
+          class="flex-grow-1 btn btn-secondary lucky-border-primary"
+        >
+          Right
+        </button>
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
