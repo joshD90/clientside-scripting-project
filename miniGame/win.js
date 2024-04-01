@@ -13,7 +13,11 @@ const alertMessage = document.getElementById("alertMessage");
 //manage win state
 export const handleWin = () => {
   //as this is in our event loop we must make sure that timerGoing is true so that it will only play once before switching timerGoing off
-  if (timerGoing === true) playWinSound();
+  if (timerGoing === true) {
+    playWinSound();
+    //also as a once off scroll to the top to see the win message
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   stopTimer();
   //change our alert status
   alertMessage.classList.remove("alert-info");
@@ -33,6 +37,9 @@ const resetGame = () => {
   coinsArray.length = 0;
   generateCoinsArray();
   setAllCoins();
+  //scroll to the bottom of the document
+  //https://stackoverflow.com/questions/11715646/scroll-automatically-to-the-bottom-of-the-page
+  window.scrollTo({ top: document.body.scrollHeight });
   //update our alertMessage
   alertMessage.classList.remove("alert-success");
   alertMessage.classList.add("alert-info");

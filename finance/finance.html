@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="icon" href="../assets/MotorLogo.webp" />
-    <title>Products</title>
+    <title>Finance</title>
   </head>
   <body>
     <!-- from navbar components -->
@@ -57,14 +57,72 @@
         </div>
       </div>
     </nav>
-    <div class="px-3 py-3 container-fluid lucky-bg-background">
-      <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <p>Value: <span id="demo"></span></p>
-    </div>
-      
 
-    </div>
+    <div class="container-fluid mt-3">
+      <div class="row">
+          <div class="col">
+              <h1>Financing your prestige vehicle:</h1>
+              <p>Here at Prestige Motors we want to ensure you drive away with the vehicle that is best suited to you, sometimes Financing your vehicle can help you achieve this dream,
+                  reviewing our stock and having a look at what we have can help you decide what the best finance package is available for you.
+              </p>
+          </div>
+          <div class="container-fluid mt-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <div class="px-3 py-3 container-fluid lucky-bg-background">
+                  <div class="slidecontainer d-flex justify-content-center">
+                    <input type="range" min="0" max="50000" value="0" class="slider" id="depositSlider">
+                    <p>Deposit: <span id="depositValue"></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container-fluid mt-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <div class="px-3 py-3 container-fluid lucky-bg-background">
+                  <div class="slidecontainer d-flex justify-content-center">
+                    <input type="range" min="10000" max="50000" value="25000" class="slider" id="carValueSlider">
+                    <p>Car Value: <span id="carValue"></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container-fluid mt-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <div class="px-3 py-3 container-fluid lucky-bg-background">
+                  <div class="slidecontainer d-flex justify-content-center">
+                    <input type="range" min="1" max="60" value="50" class="slider" id="monthsSlider">
+                    <p>Number of Months to repay: <span id="months"></span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container-fluid mt-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <form id="financeForm">
+                  <input type="submit" value="Click here to calculate your finance">
+                </form>
+              </div>
+            </div>
+          </div>
+  
+          <div class="container-fluid mt-3">
+            <div class="row">
+                <div class="col">
+                    <div id="financeResult">  </div>
+                </div>
+            </div>
+        </div>
+  
     <div class="modal modal-md fade" id="productModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content overflow-hidden position-relative">
@@ -103,13 +161,75 @@
     <script src="./modal.js" type="module"></script>
     <script src="./order.js" type="module"></script>
     <script>
-      var slider = document.getElementById("myRange");
-      var output = document.getElementById("demo");
-      output.innerHTML = slider.value;
-      
-      slider.oninput = function() {
-        output.innerHTML = this.value;
-      }
+  var depositSlider = document.getElementById("depositSlider");
+var depositValue = document.getElementById("depositValue");
+depositValue.innerHTML = depositSlider.value;
+
+depositSlider.oninput = function() {
+  depositValue.innerHTML = this.value;
+  calculateFinance(); // Recalculate finance when the deposit slider changes
+}
+
+var carValueSlider = document.getElementById("carValueSlider");
+var carValue = document.getElementById("carValue");
+carValue.innerHTML = carValueSlider.value;
+
+carValueSlider.oninput = function() {
+  carValue.innerHTML = this.value;
+  calculateFinance(); // Recalculate finance when the car value slider changes
+}
+
+var monthsSlider = document.getElementById("monthsSlider");
+var months = document.getElementById("months");
+months.innerHTML = monthsSlider.value;
+
+monthsSlider.oninput = function() {
+  months.innerHTML = this.value;
+  calculateFinance(); // Recalculate finance when the months slider changes
+}
+
+document.getElementById("financeForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  calculateFinance(); // Calculate finance
+});
+
+// Function to calculate finance
+// Function to calculate finance
+function calculateFinance() {
+  var deposit = parseFloat(depositSlider.value);
+  var carValue = parseFloat(carValueSlider.value);
+  var months = parseInt(monthsSlider.value);
+  var rate;
+
+  if (deposit <= 0) {
+    // If deposit is zero or negative, set rate to 0.09
+    rate = 0.09;
+    deposit = 0; // Set deposit to zero
+  } else if (deposit < 20000) {
+    rate = 0.09;
+  } else if (deposit >= 20000 && deposit <= 49000) {
+    rate = 0.075;
+  } else {
+    rate = 0.06;
+  }
+
+  var interest = carValue * rate;
+  var totalAmount = (carValue + interest) - deposit;
+  var monthlyRepayment = totalAmount / months;
+
+
+  // Display the results with each piece of information on a new line
+  var financeResult = "Car Value: €" + carValue.toFixed(2) + "<br>";
+  financeResult += "Interest: €" + interest.toFixed(2) + "<br>";
+  financeResult += "Deposit: €" + deposit.toFixed(2) + "<br>";
+  financeResult += "Rate based on Deposit % " + rate * 100 +"<br>";
+  financeResult += "Total Amount owed: €" + totalAmount.toFixed(2) + "<br>";
+  financeResult += "Monthly Repayment: €" + monthlyRepayment.toFixed(2);
+  
+  document.getElementById("financeResult").innerHTML = financeResult;
+  document.getElementById("financeForm").style.display = "none";
+}
+
       </script>
   </body>
 </html>
