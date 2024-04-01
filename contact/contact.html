@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="p-5 lucky-bg-primary text-white text-center">
+      <h1>
+          Lucky Motor Group Contact  
+      </h1>
+  </div>
+
+  <!--navigation bar top of page, with links to other pages-->
+  <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><!--logo-->
+      <img src="../images/car-front-fill.svg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+      LMG
+      </a>
+      <!--Links to website pages in navbar-->
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../products/index.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../finance/finance.html">Finance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class ="col-12">
+      <h1 class ="text-center">Contact Us</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="../images/SalesContact.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sales</h5>
+            <span>Phone:</span>
+            <a href="tel://01234501"> 01 123 4501</a>
+            <br>
+            <span>E-mail:</span>
+            <a href="mailto:info@lmg.ie">Sales@LMG.ie</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="../images/FinanceContact.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Finance</h5>
+            <span>Phone:</span>
+            <a href="tel://01234502"> 01 123 4502</a>
+            <br>
+            <span>E-mail:</span>
+            <a href="mailto:info@lmg.ie">Finance@LMG.ie</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="../images/ServiceContact.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Service</h5>
+            <span>Phone:</span>
+            <a href="tel://01234503"> 01 123 4503</a>
+            <br>
+            <span>E-mail:</span>
+            <a href="mailto:info@lmg.ie">Service@LMG.ie</a>
+          </div>>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row m-3 g-4 lucky-bg-background">
+      <div class="col-md-6">
+        <form onsubmit="formChecker()" id="myForm">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="formName" class="form-control" placeholder="Name" required=""/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="email">Enter your email address:</label>
+              <input type="email" id="formEmail" class="form-control" placeholder="Email" aria-describedby="emailHelp" required=""/>
+            </div>
+          </div>  
+          <div class="mb-3 mt-3">
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="formPhone" class="form-control" placeholder="Phone number"/>
+          </div>
+          <div class="mb-3 mt-3">
+            <label for="message">Message:</label>
+            <textarea class="form-control" rows="5" id="formMessage" name="text"></textarea>
+            <div id="emailHelp" class="form-text">We'll never share your personal details with anyone else.</div>
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label"></label>
+              <input class="form-check-input" type="checkbox" name="remember"> Remember me
+          </div>
+          <button type="submit" class="mt-3 btn btn-primary rounded-pill pt-1 pb-1 ps-5 pe-5">Send</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3 align-items-center ">
+          <div class="catd-body">
+            <h5 class="card-title">Our Location</h5>
+          </div>
+          <div class="ratio ratio-4x3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.6669331195603!2d-6.308655123029799!3d53.40289767049043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867120c000fe4e7%3A0xd49b1942074f643!2sCharlestown%20Pl%2C%20Dublin!5e0!3m2!1sen!2sie!4v1711956969102!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 g-4 d-flex flex-column align-items-center text-center">
+        <div class="icon">
+          <img src="../images/geo-alt-fill.svg" alt="Location" width="40" height="40" class="d-inline-block align-text-top">
+        </div> 
+        <div class="text">
+          <p>Address: 1 Charlestown Place,<br> St Margarets Rd, <br> Dublin 11</p>
+        </div>
+      </div> 
+        
+      <div class="col-4 g-4 d-flex flex-column align-items-center text-center">  
+        <div class="icon">
+          <img src="../images/telephone-fill.svg" alt="Phone" width="40" height="40" class="d-inline-block align-text-top">
+        </div>
+        <div class="text">
+          <span>Phone:</span>
+          <a href="tel://01234500"> 01 123 4500</a>
+        </div>
+      </div>
+      <div class="col-4 g-4 d-flex flex-column align-items-center text-center">  
+        <div class="icon">
+          <img src="../images/envelope-fill.svg" alt="Email" width="40" height="40" class="d-inline-block align-text-top">
+        </div>
+        <div class="text">
+          <span>E-mail:</span>
+          <a href="mailto:info@lmg.ie">info@LMG.ie</a>
+        </div>
+      </div>
+    </div> 
+  </div> 
+  <div class="mt-5 p-4 bg-dark text-white text-center">
+    <img src="../images/car-front.svg" alt="Logo" width="40" height="40" class="d-inline-block">
+    <h1>LMG Motors</h1>
+    <p>Footer</p>
+  </div>
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
