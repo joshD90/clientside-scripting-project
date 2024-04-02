@@ -168,3 +168,8 @@ body {
   background-size: cover;
   cursor: pointer;
 }
+
+.p_finance_class{
+	text-align: justify;
+	text-justify: inter-word;
+}

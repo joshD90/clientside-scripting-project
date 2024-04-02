@@ -1,172 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="icon" href="../assets/MotorLogo.webp" />
-    <title>Finance</title>
-  </head>
-  <body>
-    <!-- from navbar components -->
-    <nav class="navbar navbar-expand-md">
-      <div class="container-fluid d-flex justify-content-between">
-        <a class="navbar-brand" href="#"
-          ><img
-            src="../assets/MotorLogo.webp"
-            alt="website-logo"
-            class="nav-img"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto text-center">
-            <li class="nav-item">
-              <a class="nav-link " href="../index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Finance</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../products/index.html">Products</a>
-            </li>
+<head>
+  <title>Finance</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../styles.css" />
+  <style> /* Centered box with background image */
+    .finance-results-box {
+      background-image: url('../images/CarCarFinance.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      text-align: center;
+      padding: 20px;
+    }
 
-            <li class="nav-item">
-              <a class="nav-link" href="../miniGame/index.html">Mini-Game</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contact/contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
+    /* Overlay to ensure text readability */
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.7); /* Adjust the alpha value to control the overlay opacity */
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    /* Text inside the box */
+    .finance-text {
+      position: relative;
+      z-index: 2;
+      color: #000; /* Adjust text color as needed */
+    }
+
+    .center_finance_img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 55%;
+    }
+
+  </style></style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="p-5 lucky-bg-primary text-white text-center">
+        <h1>
+            Lucky Motor Group Financing 
+        </h1>
+    </div>
+
+   <!--navigation bar top of page, with links to other pages-->
+   <nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><!--logo-->
+      <img src="../assets/MotorLogo.webp" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+      </a>
+      <!--Links to website pages in navbar-->
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../miniGame/index.html">Mini-Game</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../products/index.html">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact/contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">Finance</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Lucky Motor Group Finance Team</h2>
+        <h5>We can make it work:</h5>
+        <div><img src="../images/FinanceContact.jpg" alt="Salework" class="rounded" style="width: 55%;"class="d-inline-block align-text-top"></div>
+        <p class="p_finance_class">By enganging with our financing team, you can achieve the dream of owning a prestige vehicle and driving it off our lot today. Whether it is a pedigree sports machine 
+          or a luxury sedan, remember our finance team will step through the process with you every step of the way.</p>
+     
+        <hr class="d-sm-none">
       </div>
-    </nav>
-
-    <div class="container-fluid mt-3">
-      <div class="row">
-          <div class="col">
-              <h1>Financing your prestige vehicle:</h1>
-              <p>Here at Prestige Motors we want to ensure you drive away with the vehicle that is best suited to you, sometimes Financing your vehicle can help you achieve this dream,
-                  reviewing our stock and having a look at what we have can help you decide what the best finance package is available for you.
-              </p>
-          </div>
-          <div class="container-fluid mt-3">
-            <div class="row justify-content-center">
-              <div class="col-lg-6">
-                <div class="px-3 py-3 container-fluid lucky-bg-background">
-                  <div class="slidecontainer d-flex justify-content-center">
-                    <input type="range" min="0" max="50000" value="0" class="slider" id="depositSlider">
-                    <p>Deposit: <span id="depositValue"></span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="container-fluid mt-3">
-            <div class="row justify-content-center">
-              <div class="col-lg-6">
-                <div class="px-3 py-3 container-fluid lucky-bg-background">
-                  <div class="slidecontainer d-flex justify-content-center">
-                    <input type="range" min="10000" max="50000" value="25000" class="slider" id="carValueSlider">
-                    <p>Car Value: <span id="carValue"></span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="container-fluid mt-3">
-            <div class="row justify-content-center">
-              <div class="col-lg-6">
-                <div class="px-3 py-3 container-fluid lucky-bg-background">
-                  <div class="slidecontainer d-flex justify-content-center">
-                    <input type="range" min="1" max="60" value="50" class="slider" id="monthsSlider">
-                    <p>Number of Months to repay: <span id="months"></span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="container-fluid mt-3">
-            <div class="row justify-content-center">
-              <div class="col-lg-6">
-                <form id="financeForm">
-                  <input type="submit" value="Click here to calculate your finance">
-                </form>
-              </div>
-            </div>
-          </div>
+      <div class="col-sm-8">
+        <h2>Financing your Prestige Vehicle:</h2>
+        <div><img src="../images/SaleCarFinance.jpg" alt="HappySale" class="rounded" style="width: 75%;"class="d-inline-block align-text-top"></div>
+        <p class="p_finance_class">Here at Prestige Motors we want to ensure you drive away with the vehicle that is best suited to you, sometimes Financing your vehicle can help you achieve this dream,
+          reviewing our stock and having a look at what we have can help you decide what the best finance package is available for you.</p>
+      </div>
+    </div>
+  </div>
   
-          <div class="container-fluid mt-3">
-            <div class="row">
-                <div class="col">
-                    <div id="financeResult">  </div>
-                </div>
-            </div>
-        </div>
-  
-    <div class="modal modal-md fade" id="productModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content overflow-hidden position-relative">
-          <button
-            type="button"
-            class="btn-close btn-close-white position-absolute top-0 end-0"
-            aria-label="Close"
-            data-bs-toggle="modal"
-            data-bs-target="#productModal"
-          ></button>
-          <div>
-            <img alt="car-image" class="w-100" id="modalImg" />
-          </div>
 
-          <h2
-            id="modalName"
-            class="w-100 p-2 text-white lucky-bg-primary text-center"
-          >
-            BMW Name
-          </h2>
-          <div class="p-3">
-            <p id="modalDesc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-              recusandae nihil esse quasi ipsa sunt, eligendi qui dolorum
-              deleniti eaque explicabo quae numquam labore beatae debitis saepe
-              perspiciatis neque perferendis.
-            </p>
-            <p id="modalPrice">€55000.00</p>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+        <h3 class="mb-4">Finance Calculator:</h3>
+        <p class="p_finance_class">Adjust the deposit amount you will set as a downpayment:</p>
+        <ul class="p_finance_class">
+          <li>Less than €20,000 will assign a repayment rate of 9%.</li>
+          <li>Between €20,000 and €49,000 will assign a rate of 7.5%.</li>
+          <li>Over €49,000 will assign a rate of 6%.</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3 class="mb-4">Vehicle Value:</h3>
+        <p class="p_finance_class">Select the vehicle value.</p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="mb-4">Repayment Months:</h3>        
+        <p class="p_finance_class">Select the number of months you wish to repay for.</p>
+        <p class="p_finance_class">The range allows from 1 to 60 months.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="px-3 py-3 container-fluid lucky-bg-background">
+          <div class="slidecontainer d-flex justify-content-center">
+            <input type="range" min="0" max="300000" value="0" class="slider" id="depositSlider">
+            <p class="mt-3">Deposit: <span id="depositValue"></span></p>
           </div>
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/cars/carList.js" type="module"></script>
-    <script src="./index.js" type="module"></script>
-    <script src="./modal.js" type="module"></script>
-    <script src="./order.js" type="module"></script>
+  </div>
+  
+  <div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="px-3 py-3 container-fluid lucky-bg-background">
+          <div class="slidecontainer d-flex justify-content-center">
+            <input type="range" min="10000" max="300000" value="150000" class="slider" id="carValueSlider">
+            <p class="mt-3">Car Value: <span id="carValue"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="px-3 py-3 container-fluid lucky-bg-background">
+          <div class="slidecontainer d-flex justify-content-center">
+            <input type="range" min="1" max="60" value="50" class="slider" id="monthsSlider">
+            <p class="mt-3">Number of Months to repay: <span id="months"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <form id="financeForm">
+          <input type="submit" value="Click here to calculate your finance" class="btn btn-primary mt-3">
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="finance-results-box">
+          <div class="overlay"></div> <!-- Overlay to ensure text readability -->
+          <div class="finance-text">
+            <!-- Your finance result content -->
+            <div id="financeResult" class="mt-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+        
+        <div class="row">
+          <div class="col-4 g-4 d-flex flex-column align-items-center text-center">
+            <div class="icon">
+              <img src="../images/geo-alt-fill.svg" alt="Location" width="40" height="40" class="d-inline-block align-text-top">
+            </div> 
+            <div class="text">
+              <p>Address: 1 Charlestown Place,<br> St Margarets Rd, <br> Dublin 11</p>
+            </div>
+          </div> 
+            
+          <div class="col-4 g-4 d-flex flex-column align-items-center text-center">  
+            <div class="icon">
+              <img src="../images/telephone-fill.svg" alt="Phone" width="40" height="40" class="d-inline-block align-text-top">
+            </div>
+            <div class="text">
+              <span>Phone:</span>
+              <a href="tel://01234500"> 01 123 4500</a>
+            </div>
+          </div>
+          <div class="col-4 g-4 d-flex flex-column align-items-center text-center">  
+            <div class="icon">
+              <img src="../images/envelope-fill.svg" alt="Email" width="40" height="40" class="d-inline-block align-text-top">
+            </div>
+            <div class="text">
+              <span>E-mail:</span>
+              <a href="mailto:info@lmg.ie">info@LMG.ie</a>
+            </div>
+          </div>
+        </div> 
+      </div> 
+      <div class="mt-5 p-4 bg-dark text-white text-center">
+        <h1>LMG Motors</h1>
+        <p>Footer</p>
+      </div>
+    </div>  
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-  var depositSlider = document.getElementById("depositSlider");
+
+var depositSlider = document.getElementById("depositSlider");
 var depositValue = document.getElementById("depositValue");
 depositValue.innerHTML = depositSlider.value;
 
 depositSlider.oninput = function() {
-  depositValue.innerHTML = this.value;
+  var value = parseFloat(this.value);
+  if (value <= 0) {
+    depositValue.innerHTML = 0;
+  } else {
+    depositValue.innerHTML = value;
+  }
   calculateFinance(); // Recalculate finance when the deposit slider changes
 }
 
@@ -193,19 +268,16 @@ document.getElementById("financeForm").addEventListener("submit", function(event
   calculateFinance(); // Calculate finance
 });
 
-// Function to calculate finance
-// Function to calculate finance
 function calculateFinance() {
   var deposit = parseFloat(depositSlider.value);
+  if (deposit <= 0) {
+    deposit = 0; // Set deposit to zero if negative or zero
+  }
   var carValue = parseFloat(carValueSlider.value);
   var months = parseInt(monthsSlider.value);
   var rate;
 
-  if (deposit <= 0) {
-    // If deposit is zero or negative, set rate to 0.09
-    rate = 0.09;
-    deposit = 0; // Set deposit to zero
-  } else if (deposit < 20000) {
+  if (deposit < 20000) {
     rate = 0.09;
   } else if (deposit >= 20000 && deposit <= 49000) {
     rate = 0.075;
@@ -217,19 +289,21 @@ function calculateFinance() {
   var totalAmount = (carValue + interest) - deposit;
   var monthlyRepayment = totalAmount / months;
 
+  // Ensure negative values are set to zero
+  totalAmount = Math.max(totalAmount, 0);
+  monthlyRepayment = Math.max(monthlyRepayment, 0);
 
   // Display the results with each piece of information on a new line
   var financeResult = "Car Value: €" + carValue.toFixed(2) + "<br>";
   financeResult += "Interest: €" + interest.toFixed(2) + "<br>";
   financeResult += "Deposit: €" + deposit.toFixed(2) + "<br>";
-  financeResult += "Rate based on Deposit % " + rate * 100 +"<br>";
+  financeResult += "Rate based on Deposit %: " + (rate * 100).toFixed(2) + "%<br>";
   financeResult += "Total Amount owed: €" + totalAmount.toFixed(2) + "<br>";
   financeResult += "Monthly Repayment: €" + monthlyRepayment.toFixed(2);
   
   document.getElementById("financeResult").innerHTML = financeResult;
   document.getElementById("financeForm").style.display = "none";
-}
-
+};
       </script>
   </body>
 </html>
