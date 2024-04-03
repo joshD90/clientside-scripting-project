@@ -77,9 +77,26 @@ body {
   color: var(--black-substitute);
 }
 
+.behind {
+  z-index: -5;
+}
+/* Banner Specifics */
+.banner {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(./images/CarCarFinance.jpg);
+}
+
 /* Navbar Specifics Section */
 .nav-img {
   width: 4rem;
+}
+
+.nav-container {
+  margin-top: 10rem;
 }
 
 /* Products Specifics Section */
@@ -169,7 +186,7 @@ body {
   cursor: pointer;
 }
 
-.p_finance_class{
-	text-align: justify;
-	text-justify: inter-word;
+.p_finance_class {
+  text-align: justify;
+  text-justify: inter-word;
 }
