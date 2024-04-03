@@ -131,6 +131,13 @@ body {
 /* finance css, lifted from W3Schools for the moment */
 .slidecontainer {
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slidecontainer p {
+  width: 8rem;
 }
 
 .slider {
@@ -169,7 +176,47 @@ body {
   cursor: pointer;
 }
 
-.p_finance_class{
-	text-align: justify;
-	text-justify: inter-word;
+.p_finance_class {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* moved from the html style tag */
+.finance-results-box {
+  background-image: url("../images/CarCarFinance.jpg"); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Overlay to ensure text readability */
+.overlay {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Adjust the alpha value to control the overlay opacity */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Text inside the box */
+.finance-text {
+  position: relative;
+  z-index: 2;
+  color: #000; /* Adjust text color as needed */
+}
+
+.center_finance_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
 }
