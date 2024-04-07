@@ -36,7 +36,7 @@ const createCard = (carDetails) => {
     "lucky-bg-background",
     "p-0"
   );
-  cardImg.classList.add("card-img-top");
+  cardImg.classList.add("card-img-top", "product-card-img");
   cardBody.classList.add("card-body");
   carHead.classList.add("lucky-bg-primary", "p-2", "w-100", "text-white");
   carDesc.classList.add("card-text");
