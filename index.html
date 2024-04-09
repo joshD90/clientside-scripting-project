@@ -10,6 +10,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/990c7d9975.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -71,45 +72,176 @@
           </div>
         </div>
       </nav>
-    </header>
-    <div class="w-100 bg-white">
-      <section class="container-fluid">
-        <div class="px-3 py-3 container-fluid lucky-bg-background">
-          <div class="row g-1 text-center">
-            <div class="col-sm-6">
+      <header>
+        <div class="p-5 pb-3 lucky-bg-primary text-white fixed-top behind banner">
+          <h1 class="p-0 m-0 text-start mb-4">Lucky Motors</h1>
+          <h3 class="text-end p-0 mb-0">Drive Your Fortune</h3>
+        </div>
+  
+        <!--navigation bar top of page, with links to other pages-->
+        <nav class="navbar navbar-expand-md bg-light navbar-light nav-container">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"
+              ><!--logo-->
               <img
-                src="images/NewCarsHome.jpg"
-                class="img-fluid mb-4 rounded"
-                alt="..."
+                src="assets/MotorLogo.webp"
+                alt="Logo"
+                width="40"
+                height="40"
+                class="d-inline-block align-text-top"
               />
-            </div>
-            <div
-              class="col-sm-6 d-flex flex-column align-items-center justify-content-center text-center"
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              <h3 class="text-muted font-bold">New Cars at LG4 motors</h3>
-              <p>Please see our products page for new cars</p>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Links to website pages in navbar-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="nav nav-pills ms-auto navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item ms-1">
+                  <a class="nav-link" href="finance/finance.html">Finance</a>
+                </li>
+                <li class="nav-item ms-1">
+                  <a class="nav-link" href="products/index.html">Products</a>
+                </li>
+                <li class="nav-item ms-1">
+                  <a class="nav-link" href="miniGame/index.html">Mini-Game</a>
+                </li>
+                <li class="nav-item ms-1">
+                  <a class="nav-link" href="contact/contact.html">Contact</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="row g-1 text-center">
-            <div
-              class="col-sm-6 d-flex flex-column align-items-center justify-content-center text-center"
-            >
-              <h3 class="text-muted font-bold">Used Cars at LG4 motors</h3>
+        </nav>
+      </header>
+      <div class="w-100 bg-white">
+        <section class="container-fluid">
+          <div class="px-3 py-3 container-fluid lucky-bg-background">
+            <div class="row g-1 text-center">
+              <div class="col-sm-6 d-flex flex-column justify-content-center text-center">
+                <img
+                  src="images/NewCarsHome.jpg"
+                  class="img-fluid rounded d-block "
+                  alt="New Cars"
+                />
+              </div>
+              <div
+                class="col-sm-6 d-flex flex-column align-items-center justify-content-center text-center"
+              >
+                <h3 class="text-muted font-bold">New cars at Lucky Motors</h3>
+                <p>Please see our products page for new cars <i class="fa-solid fa-car-side fa-bounce" style="color:rgb(152, 32, 32)"></i>, we have great finance deals please see our finance page <i class="fa-solid fa-coins fa-beat" style="color:rgb(206, 186, 72)"></i> to calculate a finance plan that works for you.</p>
+              </div>
             </div>
-            <div class="col-sm-6">
-              <img
-                src="images/UsedCarsHome.jpg"
-                class="img-fluid mb-4 rounded"
-                alt="..."
-              />
+            <div class="row g-1 text-center">
+              <div
+                class="col-sm-6 d-flex flex-column align-items-center justify-content-center text-center"
+              >
+                <h3 class="text-muted font-bold">Used cars at Lucky Motors</h3>
+                <p>We have great quality assured used cars to suit your needs.</p>
+              </div>
+              <div class="col-sm-6 d-flex flex-column justify-content-center text-center">
+                <img
+                  src="images/UsedCarsHome.jpg"
+                  class="img-fluid rounded d-block"
+                  alt="Used Cars"
+                />
+              </div>
+            </div>
+          
+  
+  
+          <div class="row row-cols-1 row-cols-md-3 g-4 p-3 lucky-bg-background">
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-solid fa-star" style="color: gold"></i><i class="fa-solid fa-star" style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i></h5>
+                  <i class="fa-solid fa-quote-left fa-2x fa-pull-left fa-flip"  style="--fa-pull-margin: 4em; --fa-animation-duration: 3s"></i>
+                  Just purchased a new car, I am delighted with the car it's a dream to drive.  
+                  Thanks to Dave who guided me through the whole process from the test drive to 
+                  the actual purchase he was very professional and knowledgeable.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-solid fa-star" style="color: gold"></i><i class="fa-solid fa-star" style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i></h5>
+                  <i class="fa-solid fa-quote-left fa-2x fa-pull-left fa-flip"  style="--fa-pull-margin: 4em; --fa-animation-duration: 6s"></i>
+                  I had a fantastic experience with Joshua who helped me purchase my dream car 
+                  excellence in ice blue . From the moment I walked into the dealership, he was attentive,
+                   knowledgeable, and went above and beyond to ensure I got the perfect vehicle for my needs. 
+                   He patiently answered all of my questions, explained the features, and even took the time to demonstrate 
+                   how everything worked. Joshua  professionalism and friendly demeanor made the entire process enjoyable.
+                    I left the dealership with my new car and a big smile on my face, all thanks to this exceptional salesman's 
+                    dedication and expertise. I highly recommend them to anyone in search of a great car-buying experience!
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-solid fa-star" style="color: gold"></i><i class="fa-solid fa-star" style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i></h5>
+                  <i class="fa-solid fa-quote-left fa-2x fa-pull-left fa-flip"  style="--fa-pull-margin: 4em; --fa-animation-duration: 3s"></i>
+                  Steven was a pleasure to deal with. Good knowledge and not pushy in any way. Very professional 
+                  and a great well lit showroom. Very impressive experience all round.
+                  Professional and friendly staff, who help me from start to finish and always answer any questions i asked.
+                  Thanks again.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="p-2 bg-dark text-white text-center">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-sm-6"> 
+            <h1>Lucky Motors</h1>
+            <p>Drive your fortune</p>
+          </div>
+          <div class="col-sm-6 p-5">
+            <!--nested content--> 
+            <div class="row align-items-center justify-content-center text-center">
+              <div class="col-sm-6"
+                <form onsubmit="formChecker()" id="myForm">
+                  <label for="email">If you would like the latest news from Lucky Motors please enter your email address below:</label>
+                  <input
+                    type="email"
+                    id="formEmail"
+                    class="form-control"
+                    placeholder="Email"
+                    aria-describedby="emailHelp"
+                    required=""
+                  />
+                  <div id="emailHelp" class="form-text text-white">
+                    <p>We'll never share your personal details with anyone else.</p>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label"></label>
+                    <button type="submit" class="btn btn-primary rounded-pill pt-1 pb-1 ps-5 pe-5">
+                    Send
+                    </button>
+                  </div>
+                </form>
+              </div>  
             </div>
           </div>
         </div>
-      </section>
-    </div>
-    <div class="mt-5 p-4 bg-dark text-white text-center">
-      <h1>LMG Motors</h1>
-      <p>Footer</p>
-    </div>
-  </body>
-</html>
+      </div> 
+    </body>
+  </html>
