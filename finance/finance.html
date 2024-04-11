@@ -4,7 +4,7 @@
     <title>Finance</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="../images/icon.png">
+    <link rel="icon" type="image/x-icon" href="../images/icon.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -13,14 +13,10 @@
   </head>
   <body>
     <header>
-      <div class="p-5 lucky-bg-primary text-white text-center">
-        <h1>Lucky Motor Group Financing</h1>
-      </div>
-
       <!--navigation bar top of page, with links to other pages-->
-      <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <nav class="navbar navbar-expand-md bg-light navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand" href="../index.html"
             ><!--logo-->
             <img
               src="../assets/MotorLogo.webp"
@@ -30,49 +26,68 @@
               class="d-inline-block align-text-top"
             />
           </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <!--Links to website pages in navbar-->
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../miniGame/index.html">Mini-Game</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../products/index.html">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contact/contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../gallery/gallery.html">Gallery</a>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Finance</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-pills ms-auto navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link active" href="../finance/finance.html"
+                  >Finance</a
+                >
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="../products/index.html">Products</a>
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="../miniGame/index.html">Mini-Game</a>
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="../contact/contact.html">Contact</a>
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="../gallery/gallery.html">Gallery</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
 
     <div class="row">
-      <div class ="col-12">
-        <h1 class ="text-center">Finance your Prestige Vehicle Today!</h1>
+      <div class="col-12">
+        <h1 class="text-center">Finance your Prestige Vehicle Today!</h1>
       </div>
     </div>
 
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2 g-4">
-        
         <div class="col">
           <div class="card h-100">
-            <img src="../images/FinanceContact.jpg" class="card-img-top" alt="...">
+            <img
+              src="../images/FinanceContact.jpg"
+              class="card-img-top"
+              alt="..."
+            />
             <div class="card-body">
               <h5 class="card-title">Finance</h5>
               <p class="p_finance_class">
-                By enganging with our financing team, you can achieve the dream of
-                owning a prestige vehicle and driving it off our lot today.
+                By enganging with our financing team, you can achieve the dream
+                of owning a prestige vehicle and driving it off our lot today.
                 Whether it is a pedigree sports machine or a luxury sedan,
                 remember our finance team will step through the process with you
                 every step of the way.
@@ -83,12 +98,16 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img src="../images/SaleCarFinance.jpg" class="card-img-top" alt="...">
+            <img
+              src="../images/SaleCarFinance.jpg"
+              class="card-img-top"
+              alt="..."
+            />
             <div class="card-body">
               <h5 class="card-title">Finance Experience</h5>
               <p class="p_finance_class">
-                Here at Prestige Motors we want to ensure you drive away with the
-                vehicle that is best suited to you, sometimes Financing your
+                Here at Prestige Motors we want to ensure you drive away with
+                the vehicle that is best suited to you, sometimes Financing your
                 vehicle can help you achieve this dream, reviewing our stock and
                 having a look at what we have can help you decide what the best
                 finance package is available for you.
@@ -98,9 +117,6 @@
         </div>
       </div>
     </div>
-
-
-
 
     <section class="p-5 pb-0">
       <div
@@ -280,13 +296,37 @@
       </div>
     </section>
 
-    <footer class="mt-5 p-4 bg-dark text-white text-center">
-      <h1>LMG Motors</h1>
-      <p>Drive your Fortune!</p>
+    <footer
+      class="mt-2 p-4 bg-dark lucky-text-background d-flex align-items-center justify-content-between flex-column flex-md-row"
+    >
+      <div class="mb-5 mb-md-0">
+        <h3>Lucky Motors</h3>
+        <p>Drive Your Fortune</p>
+      </div>
+      <div class="d-none d-md-block">
+        <img src="../assets/MotorLogo.webp" alt="Logo" class="nav-img" />
+      </div>
+      <div>
+        <div class="d-flex align-items-center mb-3">
+          <i class="fa-solid fa-phone me-3"></i>
+          <p class="mb-0">01 123 4500</p>
+        </div>
+        <div class="d-flex align-items-center mb-3 text-start">
+          <i class="fa-solid fa-location-dot me-3"></i>
+          <div>
+            <p class="mb-1">1 Charlestown Place,</p>
+            <p class="mb-1">St Margarets Rd,</p>
+            <p class="mb-1">Dublin 11</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-envelope me-3"></i>
+          <p class="mb-0">info@lmg.ie</p>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./finance.js"></script>
   </body>
-
 </html>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Gallery</title>
-    <link rel="icon" type="image/x-icon" href="../images/icon.png">
+    <link rel="icon" type="image/x-icon" href="../images/icon.png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -12,21 +12,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="../styles.css" />
-<script>
- 
-  </script>
-
+    <script></script>
   </head>
   <body>
     <header>
-      <div class="p-5 lucky-bg-primary text-white text-center">
-        <h1>Lucky Motors - Drive Your Fortune!</h1>
-      </div>
-
       <!--navigation bar top of page, with links to other pages-->
-      <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <nav class="navbar navbar-expand-md bg-light navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand" href="../index.html"
             ><!--logo-->
             <img
               src="../assets/MotorLogo.webp"
@@ -36,168 +29,271 @@
               class="d-inline-block align-text-top"
             />
           </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <!--Links to website pages in navbar-->
-          <ul class="nav nav-pills">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../miniGame/index.html">Mini-Game</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../products/index.html">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../contact/contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../finance/finance.html">Finance</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Gallery</a>
-            </li>
-          </ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav nav-pills ms-auto navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="../finance/finance.html">Finance</a>
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="../products/index.html">Products</a>
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="../miniGame/index.html">Mini-Game</a>
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="../contact/contact.html">Contact</a>
+              </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link active" href="../gallery/gallery.html"
+                  >Gallery</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
-
 
     <div class="container">
       <div class="row">
         <div class="col">
           <div class="card">
-            <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
-              
+            <div
+              id="carouselControls"
+              class="carousel carousel-dark slide"
+              data-bs-ride="carousel"
+            >
               <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselIndicators"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="../images/caro_car.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-md-block" style="visibility: hidden;">
+                  <img
+                    src="../images/caro_car.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-md-block"
+                    style="visibility: hidden"
+                  >
                     <h5>Only a prestige vehicle awaits you!</h5>
-                    <p>Contact our sales team for more information using the contact page!</p>
+                    <p>
+                      Contact our sales team for more information using the
+                      contact page!
+                    </p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="../images/caro_mehx.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-md-block" style="visibility: hidden;">
+                  <img
+                    src="../images/caro_mehx.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-md-block"
+                    style="visibility: hidden"
+                  >
                     <h5>We hire only the best mechanics in the business!</h5>
-                    <p>Some of our mechanics have worked on the WRC circuit and we include several former F1 mechanics.</p>
+                    <p>
+                      Some of our mechanics have worked on the WRC circuit and
+                      we include several former F1 mechanics.
+                    </p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="../images/caro_finance.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-md-block" style="visibility: hidden;">
+                  <img
+                    src="../images/caro_finance.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-md-block"
+                    style="visibility: hidden"
+                  >
                     <h5>Financing</h5>
-                    <p>With the team available at our disposal, all you need to worry about is where to drive!</p>
+                    <p>
+                      With the team available at our disposal, all you need to
+                      worry about is where to drive!
+                    </p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <img src="../images/CarCarFinance.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-md-block" style="visibility: hidden;">
+                  <img
+                    src="../images/CarCarFinance.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-md-block"
+                    style="visibility: hidden"
+                  >
                     <h5>The Lucky Motor Group</h5>
                     <p>Drive your Fortune!</p>
                   </div>
                 </div>
               </div>
-              
 
-
-
-
-
-
-              <button class="carousel-control-prev prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <button
+                class="carousel-control-prev prev"
+                type="button"
+                data-bs-target="#carouselControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <button
+                class="carousel-control-next next"
+                type="button"
+                data-bs-target="#carouselControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
             <div class="card-body">
               <h5 class="card-title">The Lucky Motor Group</h5>
               <p class="p_finance_class">
-                Drive Your Fortune!!!
-                (Click on an Image for Information)
+                Drive Your Fortune!!! (Click on an Image for Information)
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-      <div class="row">
-        <div
-          class="col-4 g-4 d-flex flex-column align-items-center text-center"
-        >
-          <div class="icon">
-            <img
-              src="../images/geo-alt-fill.svg"
-              alt="Location"
-              width="40"
-              height="40"
-              class="d-inline-block align-text-top"
-            />
-          </div>
-          <div class="text">
-            <p>
-              Address: 1 Charlestown Place,<br />
-              St Margarets Rd, <br />
-              Dublin 11
-            </p>
-          </div>
+    <div class="row">
+      <div class="col-4 g-4 d-flex flex-column align-items-center text-center">
+        <div class="icon">
+          <img
+            src="../images/geo-alt-fill.svg"
+            alt="Location"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
         </div>
-
-        <div
-          class="col-4 g-4 d-flex flex-column align-items-center text-center"
-        >
-          <div class="icon">
-            <img
-              src="../images/telephone-fill.svg"
-              alt="Phone"
-              width="40"
-              height="40"
-              class="d-inline-block align-text-top"
-            />
-          </div>
-          <div class="text">
-            <span>Phone:</span>
-            <a href="tel://01234500"> 01 123 4500</a>
-          </div>
-        </div>
-        <div
-          class="col-4 g-4 d-flex flex-column align-items-center text-center"
-        >
-          <div class="icon">
-            <img
-              src="../images/envelope-fill.svg"
-              alt="Email"
-              width="40"
-              height="40"
-              class="d-inline-block align-text-top"
-            />
-          </div>
-          <div class="text">
-            <span>E-mail:</span>
-            <a href="mailto:info@lmg.ie">info@LMG.ie</a>
-          </div>
+        <div class="text">
+          <p>
+            Address: 1 Charlestown Place,<br />
+            St Margarets Rd, <br />
+            Dublin 11
+          </p>
         </div>
       </div>
+
+      <div class="col-4 g-4 d-flex flex-column align-items-center text-center">
+        <div class="icon">
+          <img
+            src="../images/telephone-fill.svg"
+            alt="Phone"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+        </div>
+        <div class="text">
+          <span>Phone:</span>
+          <a href="tel://01234500"> 01 123 4500</a>
+        </div>
+      </div>
+      <div class="col-4 g-4 d-flex flex-column align-items-center text-center">
+        <div class="icon">
+          <img
+            src="../images/envelope-fill.svg"
+            alt="Email"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+        </div>
+        <div class="text">
+          <span>E-mail:</span>
+          <a href="mailto:info@lmg.ie">info@LMG.ie</a>
+        </div>
+      </div>
+    </div>
   </body>
 
-    <footer class="mt-5 p-4 bg-dark text-white text-center">
-      <h1>LMG Motors</h1>
-      <p>Drive your Fortune!</p>
-    </footer>
+  <footer
+    class="mt-2 p-4 bg-dark lucky-text-background d-flex align-items-center justify-content-between flex-column flex-md-row"
+  >
+    <div class="mb-5 mb-md-0">
+      <h3>Lucky Motors</h3>
+      <p>Drive Your Fortune</p>
+    </div>
+    <div class="d-none d-md-block">
+      <img src="../assets/MotorLogo.webp" alt="Logo" class="nav-img" />
+    </div>
+    <div>
+      <div class="d-flex align-items-center mb-3">
+        <i class="fa-solid fa-phone me-3"></i>
+        <p class="mb-0">01 123 4500</p>
+      </div>
+      <div class="d-flex align-items-center mb-3 text-start">
+        <i class="fa-solid fa-location-dot me-3"></i>
+        <div>
+          <p class="mb-1">1 Charlestown Place,</p>
+          <p class="mb-1">St Margarets Rd,</p>
+          <p class="mb-1">Dublin 11</p>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="fa-solid fa-envelope me-3"></i>
+        <p class="mb-0">info@lmg.ie</p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./gallery.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./gallery.js"></script>
 </html>
