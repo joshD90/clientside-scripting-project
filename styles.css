@@ -264,9 +264,14 @@ body {
 }
 
 /* Gallery css */
+/* Extend the custom css styling for the carousel to show its clickable */
+.carousel-item {
+  cursor: pointer;
+}
+
 .carousel-item img {
   height: 600px; /* Set the desired height here */
-   object-fit: cover; /* Ensure the image fills the fixed height container */
+  object-fit: cover; /* Ensure the image fills the fixed height container */
 }
 
 .carousel-caption {
@@ -277,7 +282,12 @@ body {
   left: 0;
   right: 0;
   color: black; /* Set text color to black */
-  background-color: rgba(255, 255, 255, 0.7); /* Background color with opacity */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Background color with opacity */
   border-radius: 10px; /* Rounded corners */
   padding: 10px; /* Padding for content */
   transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
@@ -290,7 +300,8 @@ body {
 }
 
 /* White circle behind carousel controls */
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   position: absolute; /* Set to absolute positioning */
   top: 50%; /* Position vertically centered */
   transform: translateY(-50%); /* Adjust vertical centering */
@@ -307,7 +318,7 @@ body {
 
 .carousel-control-prev:before,
 .carousel-control-next:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -321,34 +332,36 @@ body {
 
 /* Previous button styles */
 .carousel-control-prev {
-margin-left: -35px; 
+  margin-left: -35px;
 }
 
 /* Next button styles */
 .carousel-control-next {
-margin-right: -35px; 
+  margin-right: -35px;
 }
 
 /* Positioning the arrow icons within the white circles */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Styling the arrow icons */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-color: black; /* Color of the arrow icons */
-font-size: 24px; /* Size of the arrow icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: black; /* Color of the arrow icons */
+  font-size: 24px; /* Size of the arrow icons */
 }
 
 /* Previous button icon position */
 .carousel-control-prev-icon {
-margin-left: -2px; 
+  margin-left: -2px;
 }
 
 /* Next button icon position */
 .carousel-control-next-icon {
-margin-left: 2px; 
+  margin-left: 2px;
 }
