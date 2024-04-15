@@ -365,3 +365,8 @@ body {
 .carousel-control-next-icon {
   margin-left: 2px;
 }
+
+/* To colour astrisk red on form for contact page */
+.asteriskField{
+  color: red;
+}

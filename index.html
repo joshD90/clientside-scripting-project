@@ -4,6 +4,7 @@
     <title>Home</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
@@ -63,6 +64,9 @@
               <li class="nav-item ms-1">
                 <a class="nav-link" href="contact/contact.html">Contact</a>
               </li>
+              <li class="nav-item ms-1">
+                <a class="nav-link" href="gallery/gallery.html">Gallery</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -71,6 +75,7 @@
     <div class="w-100 bg-white">
       <section class="container-fluid">
         <div class="px-3 py-3 container-fluid lucky-bg-background">
+          <!--New cars row-->
           <div class="row g-1 text-center">
             <div class="col-sm-6 d-flex flex-column justify-content-center text-center">
               <img
@@ -84,6 +89,7 @@
               <p>Please see our products page for new cars <i class="fa-solid fa-car-side fa-bounce" style="color:rgb(152, 32, 32)"></i>, we have great finance deals please see our finance page <i class="fa-solid fa-coins fa-beat" style="color:rgb(206, 186, 72)"></i> to calculate a finance plan that works for you.</p>
             </div>
           </div>
+          <!--Used cars row-->
           <div class="row g-1 text-center">
             <div
               class="col-sm-6 d-flex flex-column align-items-center justify-content-center text-center">
@@ -98,6 +104,7 @@
               />
             </div>
           </div>
+          <!--Testimonials row-->
           <div class="row row-cols-1 row-cols-md-3 g-4 p-3 lucky-bg-background">
             <div class="col">
               <div class="card h-100">
@@ -117,10 +124,10 @@
                   <h5 class="card-title"><i class="fa-solid fa-star" style="color: gold"></i><i class="fa-solid fa-star" style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i><i class="fa-solid fa-star"style="color: gold"></i></h5>
                   <i class="fa-solid fa-quote-left fa-2x fa-pull-left fa-flip"  style="--fa-pull-margin: 4em; --fa-animation-duration: 6s"></i>
                   I had a fantastic experience with Joshua who helped me purchase my dream car 
-                  excellence in ice blue . From the moment I walked into the dealership, he was attentive,
+                    in ice blue. From the moment I walked into the dealership, he was attentive,
                     knowledgeable, and went above and beyond to ensure I got the perfect vehicle for my needs. 
                     He patiently answered all of my questions, explained the features, and even took the time to demonstrate 
-                    how everything worked. Joshua  professionalism and friendly demeanor made the entire process enjoyable.
+                    how everything worked. Joshua professionalism and friendly demeanour made the entire process enjoyable.
                     I left the dealership with my new car and a big smile on my face, all thanks to this exceptional salesman's 
                     dedication and expertise. I highly recommend them to anyone in search of a great car-buying experience!
                 </div>
@@ -142,40 +149,35 @@
         </div>  
       </section>
     </div>
-    <div class="p-2 bg-dark text-white text-center">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-sm-6"> 
-          <h1>Lucky Motors</h1>
-          <p>Drive your fortune</p>
+    <!--Footer-->
+    <footer
+      class="mt-2 p-4 bg-dark lucky-text-background d-flex align-items-center justify-content-between flex-column flex-md-row"
+    >
+      <div class="mb-5 mb-md-0">
+        <h3>Lucky Motors</h3>
+        <p>Drive Your Fortune</p>
+      </div>
+      <div class="d-none d-md-block">
+        <img src="assets/MotorLogo.webp" alt="Logo" class="nav-img" />
+      </div>
+      <div>
+        <div class="d-flex align-items-center mb-3">
+          <i class="fa-solid fa-phone me-3"></i>
+          <p class="mb-0">01 123 4500</p>
         </div>
-        <div class="col-sm-6 p-5">
-          <!--nested content--> 
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-sm-6">
-              <form onsubmit="formChecker()" id="myForm">
-                <label for="email">If you would like the latest news from Lucky Motors, please enter your email address below:</label>
-                <input
-                  type="email"
-                  id="formEmail"
-                  class="form-control"
-                  placeholder="Email"
-                  aria-describedby="emailHelp"
-                  required=""
-                />
-                <div id="emailHelp" class="form-text text-white">
-                  <p>We'll never share your personal details with anyone else.</p>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label"></label>
-                  <button type="submit" class="btn btn-primary rounded-pill pt-1 pb-1 ps-5 pe-5">
-                    Send
-                  </button>
-                </div>
-              </form>
-            </div> 
-          </div>    
+        <div class="d-flex align-items-center mb-3 text-start">
+          <i class="fa-solid fa-location-dot me-3"></i>
+          <div>
+            <p class="mb-1">1 Charlestown Place,</p>
+            <p class="mb-1">St Margarets Rd,</p>
+            <p class="mb-1">Dublin 11</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-envelope me-3"></i>
+          <p class="mb-0">info@lmg.ie</p>
         </div>
       </div>
-    </div>  
+    </footer>
   </body>
 </html>
