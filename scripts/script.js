@@ -1,14 +1,25 @@
-function formChecker(){
-	Event.preventDefault();
-	document.getElementById("myForm").style.display = "none";//hides form after user submits
+//JavaScript for contact page form to disable form submissions if there are invalid fields
+(function formChecker() {
+	'use strict'
+  
+	// Fetch all the forms we want to apply custom Bootstrap validation styles to
+	var forms = document.querySelectorAll('.needs-validation')
 	var name=document.getElementById("formName").value;
-	var email=document.getElementById("formEmail").value;
-	var phone = document.getElementById('formPhone').value;
-	var message = document.getElementById('formMessage').value;
-	var date = document.getElementById('formDate').value;
+	// Loop over them and prevent submission
+	Array.prototype.slice.call(forms)
+	  .forEach(function (form) {
+		form.addEventListener('submit', function (event) {
+		  if (!form.checkValidity()) {
+			event.preventDefault()
+			event.stopPropagation()
+		  } else {
+			  // Form is valid, show success message
+			  alert("Thank you "+formName.value+", we will be in touch as soon as possible!");
+		  }
+  
+		  form.classList.add('was-validated')
+		}, false)
+	  })
+  })()
 
-	
-
-	//Validation is complete send user thank you message
-	alert(name+", thank you for your details. We will be in touch via "+email+" shortly.");
-}
+  //ref  https://getbootstrap.com/docs/5.0/forms/validation/
