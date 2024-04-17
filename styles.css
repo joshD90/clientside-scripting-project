@@ -373,6 +373,10 @@ body {
 
 .New-Car{
   font-family: 'Roboto Serif', serif;
-  font-size: 30px;
-  text-shadow: 3px 3px 3px #ababab;
+  font-size: 20px;
+}
+
+.Used-Car{
+  font-family: 'Roboto Serif', serif;
+  font-size: 20px;
 }
