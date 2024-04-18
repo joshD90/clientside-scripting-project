@@ -99,7 +99,7 @@ body {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url(./images/CarCarFinance.jpg);
+    url(./images/CarCarFinance.webp);
   height: 10rem;
   background-size: cover;
 }
@@ -231,7 +231,7 @@ body {
 
 /* moved from the html style tag */
 .finance-results-box {
-  background-image: url("../images/CarCarFinance.jpg"); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+  background-image: url("../images/CarCarFinance.webp"); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -373,16 +373,16 @@ body {
 }
 
 /* To colour astrisk red on form for contact page */
-.asteriskField{
+.asteriskField {
   color: red;
 }
 
-.New-Car{
-  font-family: 'Roboto Serif', serif;
+.New-Car {
+  font-family: "Roboto Serif", serif;
   font-size: 10px;
 }
 
-.Used-Car{
-  font-family: 'Roboto Serif', serif;
+.Used-Car {
+  font-family: "Roboto Serif", serif;
   font-size: 10px;
 }
