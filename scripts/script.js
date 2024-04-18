@@ -25,11 +25,11 @@
   //script for home page mailing list
 function Join() {
 	let text;
-	let email = prompt("Please enter your email address:");
-	if (email == null || email == "") {
+	let name = prompt("Please enter your email address:");
+	if (name == null || name == "") {
 	  text = "User cancelled the prompt.";
 	} else {
-	  text = "Thank you we will add" + email + "to our email distribution list";
+	  text = "Thank you we will add" + name + "to our email distribution list";
 	}
 	document.getElementById("demo").innerHTML = text;
   }
