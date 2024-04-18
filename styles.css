@@ -16,6 +16,12 @@ body {
   --highlight-color: green;
   --black-substitute: #1a1a1a;
 }
+/*Dave added class for google font*/
+.body_gallery{
+	font-family: "Roboto";
+	padding: 0;
+    margin: 0;
+}
 
 /* Custom Classes */
 /* background */
