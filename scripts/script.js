@@ -22,4 +22,14 @@
 	  })
   })()
 
-  //ref  https://getbootstrap.com/docs/5.0/forms/validation/
+  //script for home page mailing list
+function Join() {
+	let text;
+	let email = prompt("Please enter your email address:");
+	if (email == null || email == "") {
+	  text = "User cancelled the prompt.";
+	} else {
+	  text = "Thank you we will add" + email + "to our email distribution list";
+	}
+	document.getElementById("demo").innerHTML = text;
+  }
