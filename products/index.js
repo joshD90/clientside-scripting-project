@@ -42,6 +42,9 @@ const createCard = (carDetails) => {
   carDesc.classList.add("card-text");
   carPrice.classList.add("card-text");
 
+  //for optimization do lazy loading
+  cardImg.loading = "lazy";
+
   //append to our document in reverse order
   cardBody.append(carDesc, carPrice);
   cardContainer.append(cardImg, carHead, cardBody);
