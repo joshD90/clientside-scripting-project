@@ -30,6 +30,7 @@ function Join() {
 	  text = "User cancelled the prompt.";
 	} else {
 	  text = "Thank you! We will add: " + name + " to our email distribution list";
+	  document.getElementById("joinbutton").style.display="none";
 	}
 	document.getElementById("demo").innerHTML = text;
   }
