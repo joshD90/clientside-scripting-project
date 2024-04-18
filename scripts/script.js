@@ -29,7 +29,7 @@ function Join() {
 	if (name == null || name == "") {
 	  text = "User cancelled the prompt.";
 	} else {
-	  text = "Thank you we will add" + name + "to our email distribution list";
+	  text = "Thank you! We will add: " + name + " to our email distribution list";
 	}
 	document.getElementById("demo").innerHTML = text;
   }
