@@ -3,7 +3,7 @@ import { setModalDetails } from "./modal.js";
 
 const productContainer = document.getElementById("product-container");
 
-const createCard = (carDetails) => {
+const createCard = (carDetails, index) => {
   //create our elements
   const gridCellContainer = document.createElement("div");
   const cardContainer = document.createElement("div");
@@ -42,8 +42,8 @@ const createCard = (carDetails) => {
   carDesc.classList.add("card-text");
   carPrice.classList.add("card-text");
 
-  //for optimization do lazy loading
-  cardImg.loading = "lazy";
+  //for optimization do lazy loading - however if we lazy load images that initially on screen this can actually slow the site down - so we ensure that the first 6 are not lazily loaded
+  if (index > 5) cardImg.loading = "lazy";
 
   //append to our document in reverse order
   cardBody.append(carDesc, carPrice);
