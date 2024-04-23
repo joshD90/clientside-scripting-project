@@ -16,12 +16,6 @@ body {
   --highlight-color: green;
   --black-substitute: #1a1a1a;
 }
-/*Dave added class for google font*/
-.body_gallery{
-	font-family: "Roboto";
-	padding: 0;
-    margin: 0;
-}
 
 /* Custom Classes */
 /* background */
@@ -102,6 +96,7 @@ body {
     url(./images/CarCarFinance.webp);
   height: 10rem;
   background-size: cover;
+  font-family: "Oswald", sans-serif;
 }
 
 /* Navbar Specifics Section */
@@ -123,6 +118,13 @@ body {
   .banner h3 {
     margin-bottom: 2rem;
   }
+}
+
+/*Dave added class for google font for the Gallery*/
+.body_gallery {
+  font-family: "Roboto";
+  padding: 0;
+  margin: 0;
 }
 
 /* Products Specifics Section */
